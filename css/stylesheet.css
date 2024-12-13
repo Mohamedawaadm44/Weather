@@ -1,0 +1,73 @@
+::selection{
+  background-color: aqua;
+}
+
+
+.active {
+  border-color: aqua !important;
+  color: aqua !important;
+}
+
+.nav-link:hover {
+  border-color: aqua !important;
+  color: aqua !important;
+}
+
+.form-control::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: gray;
+  opacity: 1; /* Firefox */
+}
+
+.icons {
+  width: 50px;
+  height: 50px;
+}
+
+.hov-icon li {
+  transition: all 0.25s;
+}
+.hov-icon li i {
+  transition: all 0.25s;
+}
+
+.hov-icon:hover li {
+  background-color: aqua !important;
+}
+
+.hov-icon:hover li i {
+  color: white !important;
+}
+
+.bg-lightdark {
+  background-color: #262936;
+}
+
+.bg-card {
+  background-color: #323544;
+}
+
+.f-90 {
+  font-size: 60px;
+  margin: 30px 0px;
+}
+
+.card {
+  height: 450px;
+}
+
+main {
+  background-image: url(../images/banner.png);
+  background-repeat: no-repeat;
+}
+
+.move-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+.w-50px{
+  width: 50px;
+}

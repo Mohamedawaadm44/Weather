@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="fontawsome/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/stylesheet.css" />
+    <title>API</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark py-5">
+      <div class="container">
+        <a class="navbar-brand text-white d-flex" href="#"
+          ><img src="images/logo@2x.png" alt="" class="w-25" />
+          <div class="ms-4 d-flex flex-column justify-content-center">
+            <h2 class="h5 p-0 m-0">Weather</h2>
+            <span class="h6 p-0 m-0">tagline goes here</span>
+          </div></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-white m-2 px-4 py-1 rounded-pill border border-2 border-dark"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white m-2 px-4 py-1 rounded-pill border border-2 border-dark"
+                href="#"
+                >News</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white m-2 px-4 py-1 rounded-pill border border-2 border-dark"
+                href="#"
+                >Live Cameras</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white m-2 px-4 py-1 rounded-pill border border-2 border-dark"
+                href="#"
+                >Photos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white m-2 px-4 py-1 rounded-pill border border-2 border-dark"
+                href="#"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="overflow-auto bg-dark">
+      <div class="container pt-5">
+        <div class="position-relative my-5">
+          <input
+            type="text"
+            class="form-control rounded-pill bg-dark p-3 border-0 text-info px-4"
+            placeholder="Find Your Location ......"
+            id="searchInput"
+          />
+          <button
+            class="btn btn-info rounded-pill px-5 text-white move-btn p-3"
+            id="searchBtn"
+          >
+            Find
+          </button>
+        </div>
+        <div class="d-flex flex-wrap my-5">
+          <div
+            class="card col-12 col-lg-4 rounded-0 shadow-lg my-5 bg-card text-secondary"
+          >
+            <div class="card-footer shadow-lg d-flex justify-content-between">
+              <div><small class="text-secondary" id="todayName">Sunday</small></div>
+              <div><small class="text-secondary" id="todayDate">8 December</small></div>
+            </div>
+            <div class="d-flex flex-column justify-content-center text-center">
+              <span class="text-secondary fs-3" id="cityName">Cairo</span>
+              <h5 class="card-title f-90 text-white"><span id="todayTemp">22.5</span><sup>o</sup> C</h5>
+              <img src="images/logo@2x.png" alt="" class="w-50px m-auto" id="todayImage" />
+              <p class="card-text text-info mt-4" id="todayHumidity">Mist</p>
+            </div>
+            <div class="text-center mb-5">
+              <i class="fa fa-umbrella ms-4 me-1"></i> <span id="HumidityPercentage">20%</span
+              ><i class="fa fa-wind ms-4 me-1"></i> <span id="windSpeed">18km/h</span
+              ><i class="fa fa-compass ms-4 me-2"></i><span id="windDirection">East</span>
+            </div>
+          </div>
+          <div
+            class="card col-12 col-lg-4 rounded-0 shadow-lg my-5 bg-lightdark text-secondary text-center"
+          >
+            <div class="card-footer shadow-lg">
+              <div><small class="text-secondary" id="NextdayName">Monday</small></div>
+            </div>
+            <div
+              class="d-flex align-items-center h-100 justify-content-center flex-column"
+            >
+            <img src="images/logo@2x.png" alt="" class="w-50px mb-3" id="NextdayImage" />
+              <h5 class="card-title text-white fs-2"><span id="NextdayTemp">23.1 </span><sup>o</sup> C</h5>
+              <span class="text-secondary fs-4"><span id="NextdaySmallTemp">14.1</span><sup>o</sup> </span>
+              <p class="card-text text-info mt-4" id="NextdayHumidity">Sunny</p>
+            </div>
+          </div>
+          <div
+            class="card col-12 col-lg-4 rounded-0 shadow-lg my-5 bg-card text-secondary text-center"
+          >
+            <div class="card-footer shadow-lg">
+              <div><small class="text-secondary" id="NextNextdayName">Tuesday</small></div>
+            </div>
+            <div
+              class="d-flex align-items-center h-100 justify-content-center flex-column"
+            >
+            <img src="images/logo@2x.png" alt="" class="w-50px mb-3" id="NextNextdayImage" />
+              <h5 class="card-title text-white fs-2" id="NextNextdayTemp"><span>23.1</span><sup>o</sup> C</h5>
+              <span class="text-secondary fs-4"><span id="NextNextdaySmallTemp">14.1</span><sup>o</sup> </span>
+              <p class="card-text text-info mt-4" id="NextNextHumidity">Sunny</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-lightdark overflow-auto py-5">
+      <div class="container">
+        <div class="row">
+          <div class=" col-12 col-md-8">
+            <div class="position-relative my-3">
+              <input
+                type="text"
+                class="form-control rounded-pill bg-dark p-3 border-0 text-info "
+                placeholder="Enter your Email to Subscribe ......"
+              />
+              <button
+                class="btn btn-info rounded-pill text-white move-btn p-3"
+              >
+                Subscribe
+              </button>
+            </div>
+          
+          </div>
+          <div class="col-12 col-md-3 me-5 ">
+            <ul class="list-unstyled d-flex mt-3">
+              <a href="" class="text-decoration-none hov-icon">
+                <li
+                  class="bg-dark m-1 icons rounded-circle d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-brands fa-facebook-f fs-5 text-info"></i></li
+              ></a>
+              <a href="" class="text-decoration-none hov-icon"
+                ><li
+                  class="bg-dark m-1 icons rounded-circle d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-brands fa-twitter fs-5 text-info"></i></li
+              ></a>
+              <a href="" class="text-decoration-none hov-icon">
+                <li
+                  class="bg-dark m-1 icons rounded-circle d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-brands fa-google fs-5 text-info"></i></li
+              ></a>
+              <a href="" class="text-decoration-none hov-icon"
+                ><li
+                  class="bg-dark m-1 icons rounded-circle d-flex justify-content-center align-items-center"
+                >
+                  <i class="fa-brands fa-pinterest fs-5 text-info"></i></li
+              ></a>
+            </ul>
+          </div>
+          <p class="text-secondary">
+            Copyright 2014 Company name. Designed by Themezy. All rights
+            reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
